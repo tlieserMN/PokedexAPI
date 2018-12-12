@@ -22,3 +22,29 @@ and the remaining information.
 Copy the access token given and change the authroization type to Bearer Token and 
 paste in the access token.
 Then start creating requests
+
+Database structure:
+default tables Laravel gives you:
+	migrations
+	oauth_access_tokens
+	oauth_auth_codes
+	oauth_clients
+	oauth_personal_access_clients
+	oauth_refresh_tokens
+	password_resets
+	users
+created tables:
+	pokemon: holds pokemon information
+		id int not null auto_increment primary key
+		names vavrchar(65535)
+		types longtext
+		height int
+		weight int
+		abilities longtext
+		egg_groups longtext
+		stats longtext
+		genus varchar(65535)
+		description varchar(65535)
+	trainercapture: pokemon that get captured for each trainer
+		trainer_id int primary key
+		pokemon_id int primary key
